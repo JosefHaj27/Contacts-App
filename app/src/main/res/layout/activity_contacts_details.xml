@@ -4,6 +4,182 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ContactsDetailsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contact_image_id_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/contact_image_id"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/ic_launcher" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/contact_name_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="Your name"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_image_id_card_view" />
+
+    <TextView
+        android:id="@+id/contact_mobile_label_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mobile"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/contact_name_id"
+        app:layout_constraintStart_toStartOf="@id/contact_name_id"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_id" />
+
+    <EditText
+        android:id="@+id/contact_mobile_number_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="+91 84243 09879"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/contact_mobile_label_id"
+        app:layout_constraintStart_toStartOf="@id/contact_mobile_label_id"
+        app:layout_constraintTop_toBottomOf="@id/contact_mobile_label_id"
+        tools:text="" />
+
+    <TextView
+        android:id="@+id/contact_work_label_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Work"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/contact_mobile_number_id"
+        app:layout_constraintStart_toStartOf="@id/contact_mobile_number_id"
+        app:layout_constraintTop_toBottomOf="@+id/contact_mobile_number_id" />
+
+    <EditText
+        android:id="@+id/contact_work_number_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="+44 4243 0979"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/contact_work_label_id"
+        app:layout_constraintStart_toStartOf="@id/contact_work_label_id"
+        app:layout_constraintTop_toBottomOf="@id/contact_work_label_id"
+        tools:text="" />
+
+    <TextView
+        android:id="@+id/contact_mail_label_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mobile"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/contact_work_number_id"
+        app:layout_constraintStart_toStartOf="@id/contact_work_number_id"
+        app:layout_constraintTop_toBottomOf="@+id/contact_work_number_id" />
+
+    <EditText
+        android:id="@+id/contact_mail_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="friend@mail.com"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/contact_mail_label_id"
+        app:layout_constraintStart_toStartOf="@id/contact_mail_label_id"
+        app:layout_constraintTop_toBottomOf="@id/contact_mail_label_id"
+        tools:text="" />
+
+    <TextView
+        android:id="@+id/video_label_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Video"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@id/call_label_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contact_mail_id" />
+
+    <ImageView
+        android:id="@+id/video_icon_id"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/video_icon"
+        app:layout_constraintEnd_toEndOf="@id/video_label_id"
+        app:layout_constraintStart_toStartOf="@+id/video_label_id"
+        app:layout_constraintTop_toBottomOf="@+id/video_label_id" />
+
+    <TextView
+        android:id="@+id/call_label_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Call"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/message_label_id"
+        app:layout_constraintStart_toEndOf="@id/video_label_id"
+        app:layout_constraintTop_toTopOf="@+id/video_label_id" />
+
+    <ImageView
+        android:id="@+id/call_icon_id"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/call_icon"
+        app:layout_constraintEnd_toEndOf="@id/call_label_id"
+        app:layout_constraintStart_toStartOf="@+id/call_label_id"
+        app:layout_constraintTop_toBottomOf="@+id/call_label_id" />
+
+    <TextView
+        android:id="@+id/message_label_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="40dp"
+        android:text="Message"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/call_label_id"
+        app:layout_constraintTop_toTopOf="@id/call_label_id" />
+
+    <ImageView
+        android:id="@+id/message_icon_id"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/message_icon"
+        app:layout_constraintEnd_toEndOf="@id/message_label_id"
+        app:layout_constraintStart_toStartOf="@+id/message_label_id"
+        app:layout_constraintTop_toBottomOf="@+id/message_label_id" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/edit_icon"
+        android:text="Edit Contact"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/call_icon_id" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

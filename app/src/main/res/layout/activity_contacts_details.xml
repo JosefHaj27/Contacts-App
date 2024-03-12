@@ -5,7 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ContactsDetailsActivity">
+    tools:context=".view.ui.ContactsDetailsActivity">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/back_button_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/contact_image_id_card_view"
@@ -55,7 +66,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="+91 84243 09879"
-        android:inputType="number"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@id/contact_mobile_label_id"
         app:layout_constraintStart_toStartOf="@id/contact_mobile_label_id"
